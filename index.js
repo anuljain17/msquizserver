@@ -201,7 +201,7 @@ server.listen(port, () => {
         
     	clientsocketids.forEach((socketid) =>{
         if(client_socketidmap.get(socketid).userName){
-            client_scoremap.remove(client_socketidmap.get(socketid).userName);
+            client_scoremap.delete(client_socketidmap.get(socketid).userName);
         }}
     );
 	}
