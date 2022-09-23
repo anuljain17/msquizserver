@@ -197,7 +197,7 @@ server.listen(port, () => {
 		socketids && socketids.forEach((socketid) => 
 			io.to(socketid).emit('scorecard', client_scoremapjson )
 		);
-		const clientsocketids = room_socketidmap.get(temproom);
+		const clientsocketids = room_socketidmap.get(roomNo);
         
     	clientsocketids.forEach((socketid) =>{
         if(client_socketidmap.get(socketid).userName){
