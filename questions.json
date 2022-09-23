@@ -1,0 +1,30 @@
+{
+    "_version": "1",
+    "_name": "Quiz App Questions schema",
+    "_items": [
+      {
+        "id"       : "1",
+        "mcq"      : false,
+        "question" : "What is the first letter of the english alphabet",
+        "options"  : [], 
+        "answers"  : ["A", "a"],
+        "weight"   : 1
+      },
+      {
+        "id"       : "2",
+        "mcq"      : true,
+        "question" : "What is the second letter of the english alphabet",
+        "options"  : ["V", "1", "e", "b"], 
+        "answers"  : ["b", "B"],
+        "weight"   : 1
+      },
+      {
+        "id"       : "3",
+        "mcq"      : false,
+        "question" : "What is the sum of 3 & 3",
+        "options"  : [], 
+        "answers"  : ["6", "six"],
+        "weight"   : 1
+      }
+    ]
+}

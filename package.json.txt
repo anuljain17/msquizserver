@@ -1,0 +1,6 @@
+{
+  "name": "quiz-app-socketio",
+  "version": "0.0.1",
+  "description": "quiz-app-socketio app",
+  "dependencies": {}
+}
