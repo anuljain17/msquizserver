@@ -33,8 +33,10 @@ app.get('/ServerStart', (req, res) => {
   res.sendFile(__dirname + '/indexServer.html');
 });
 
-server.listen(9000, () => {
-  console.log('listening on *:9000');
+const port = process.env.port || 8080;
+
+server.listen(port, () => {
+  console.log('listening on *:80');
 });
 
  io.on('connection', (socket) => {
@@ -195,6 +197,13 @@ server.listen(9000, () => {
 		socketids && socketids.forEach((socketid) => 
 			io.to(socketid).emit('scorecard', client_scoremapjson )
 		);
+		const clientsocketids = room_socketidmap.get(temproom);
+        
+    	clientsocketids.forEach((socketid) =>{
+        if(client_socketidmap.get(socketid).userName){
+            client_scoremap.remove(client_socketidmap.get(socketid).userName);
+        }}
+    );
 	}
 };
 
