@@ -59,10 +59,10 @@ app.get("/getImageUrl/:imageid", (req, res) => {
 	getImageUrl(req, res);
 });
 
-const port = process.env.port || 9000;
+const port = process.env.port || 80;
 
 server.listen(port, () => {
-	console.log("listening on *:9000");
+	console.log("listening on " + port);
 });
 
 io.on("connection", (socket) => {
